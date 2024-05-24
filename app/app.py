@@ -13,9 +13,16 @@ st.set_page_config(
 st.sidebar.title('ODTP PyGWalker')
 st.sidebar.write('Please select a file from the sidebar to start exploring the data. These are the csv files located on `/odtp/odtp-input`.')
 
+def find_all_files(directory):
+    file_paths = []
+    for root, dirs, files in os.walk(directory):
+        for file in files:
+            file_paths.append(os.path.join(root, file))
+    return file_paths
+
 # Credit: https://discuss.streamlit.io/t/server-side-file-select/60704/2
 def file_selector(folder_path='.'):
-    filenames = os.listdir(folder_path)
+    filenames = find_all_files(folder_path)
     selected_filename = st.sidebar.selectbox('Select a file', filenames)
 
     if len(filenames) == 0:
