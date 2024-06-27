@@ -4,7 +4,8 @@
 # START OF MANUAL CONFIGURATION. 
 # ADAPT THE TEMPLATE HERE.
 ############################################################################################
-
+source "/odtp/odtp-component-client/src/shell/log.sh"
+source "/odtp/odtp-component-client/src/shell/traceback.sh"
 #########################################################
 # 1. GITHUB CLONING OF REPO
 # Clone the repository of your tool and checkout to one specific commit. 
@@ -29,7 +30,7 @@
 # 4. TOOL EXECUTION
 # While the output is managed by ODTP and placed in /odtp/odtp-output/
 #########################################################
-
+odtp::print_info "Starting app. App is persistent: Should be available at the port mapping."
 streamlit run /odtp/odtp-app/app.py
 
 #########################################################
