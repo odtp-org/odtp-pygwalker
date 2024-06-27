@@ -30,7 +30,7 @@
 # While the output is managed by ODTP and placed in /odtp/odtp-output/
 #########################################################
 
-streamlit run --server.port $PORT /odtp/odtp-app/app.py
+streamlit run /odtp/odtp-app/app.py
 
 #########################################################
 # 5. OUTPUT FOLDER MANAGEMENT
