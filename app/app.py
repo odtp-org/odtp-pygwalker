@@ -20,7 +20,8 @@ def find_all_files(directory):
     file_paths = []
     for root, dirs, files in os.walk(directory):
         for file in files:
-            file_paths.append(os.path.join(root, file))
+            if file.endswith(".csv"):
+                file_paths.append(os.path.join(root, file))
     return file_paths
 
 # Credit: https://discuss.streamlit.io/t/server-side-file-select/60704/2

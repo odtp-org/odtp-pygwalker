@@ -30,7 +30,7 @@ build-args: null
 ports:
   - name: PORT
     description: Port for the streamlit app
-    port-value: 8051
+    port-value: 8501
 
 # If applicable, parameters exposed by the component
 # Datatype can be str, int, float, or bool.
