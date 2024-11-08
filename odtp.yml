@@ -30,7 +30,7 @@ build-args: null
 ports:
   - name: PORT
     description: Port for the streamlit app
-    port-value: 8051
+    port-value: 8501
 
 # If applicable, parameters exposed by the component
 # Datatype can be str, int, float, or bool.
@@ -38,10 +38,10 @@ parameters: null
 
 # If applicable, data-input list required by the component
 data-inputs:
-  - name: input
-    type: Folder
-    path: ./input  
-    description: Input folder containing compatible csvs 
+  - name: csv files
+    type: `.csv`
+    path: *.csv 
+    description: Any number of csv files
 
 # If applicable, data-output list produced by the component
 data-output: null

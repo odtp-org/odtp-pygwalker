@@ -8,6 +8,9 @@ CSV interactive visualization
 | Current Tool Version  | [commit-hash](link-to-commit-hash) |
 
 
+![](./assets/Interface.png)
+
+
 ## ODTP command 
 
 ```
@@ -27,7 +30,7 @@ No parameter
 
 | File/Folder | Description |
 | --- | --- | 
-| Input | Folder where streamlit compatible files are located |
+| *.csv | Any number of csv files |
 
 ### Output Files
 
@@ -37,13 +40,15 @@ No output
 
 ### How to run this component as docker
 
-Build the dockerfile 
+1. Build the dockerfile 
 
 ```
 docker build -t odtp-pygwalker .
 ```
 
-Run the following command. Mount the correct volumes for input/output folders. 
+2. Create a folder called `odtp-input` and place some `.csv` files inside.
+
+3. Run the following command. Mount the correct volumes for input/output folders. 
 
 ```
 docker run -it --rm \
