@@ -39,8 +39,8 @@ parameters: null
 # If applicable, data-input list required by the component
 data-inputs:
   - name: csv files
-    type: `.csv`
-    path: *.csv 
+    type: "csv"
+    path: "*.csv" 
     description: Any number of csv files
 
 # If applicable, data-output list produced by the component
