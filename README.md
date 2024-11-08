@@ -13,7 +13,7 @@ CSV interactive visualization
 ```
 odtp new odtp-component-entry \
 --name odtp-pygwalker \
---component-version 0.1.0 \
+--component-version v0.1.4 \
 --repository https://github.com/caviri/odtp-pygwalker
 ``` 
 
@@ -47,9 +47,20 @@ Run the following command. Mount the correct volumes for input/output folders.
 
 ```
 docker run -it --rm \
--v ./odtp-input:/odtp/odtp-input \
+-v $(pwd)/odtp-input:/odtp/odtp-input \
+-v $(pwd)/odtp-output:/odtp/odtp-output \
+-v $(pwd)/odtp-logs:/odtp/odtp-logs \
+-p 8081:8081 \ 
 --env-file .env odtp-pygwalker
 ```
+
+
+## Changelog
+
+- v0.1.4
+    - Fix version pygwalker
+    - ci github actions
+    - Dockerfile compatible with Windows building
 
 
 ## Developed by

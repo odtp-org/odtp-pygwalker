@@ -33,7 +33,24 @@ filename = file_selector("/odtp/odtp-input")
 # filename = st.sidebar.file_uploader("Upload a CSV file", type="csv")
 # st.sidebar.write('You selected `%s`' % filename)
 
+
+
 if st.sidebar.button('Load CSV'):
     df = pd.read_csv(filename)
     pyg_app = StreamlitRenderer(df)
     pyg_app.explorer()
+
+
+
+
+# # You should cache your pygwalker renderer, if you don't want your memory to explode
+# @st.cache_resource
+# def get_pyg_renderer(file) -> "StreamlitRenderer":
+#     df = pd.read_csv("./bike_sharing_dc.csv")
+#     # If you want to use feature of saving chart config, set `spec_io_mode="rw"`
+#     return StreamlitRenderer(df, spec="./gw_config.json", spec_io_mode="rw")
+
+
+# renderer = get_pyg_renderer()
+
+# renderer.explorer()

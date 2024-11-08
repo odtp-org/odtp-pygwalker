@@ -1,7 +1,7 @@
 # This file should contain basic component information for your component.
 component-name: odtp-pygwalker
 component-author: Carlos Vivar Rios
-component-version: 0.1.0
+component-version: v0.1.4
 component-repository: https://github.com/caviri/odtp-pygwalker
 component-license: AGPL-3.0
 component-type: interactive

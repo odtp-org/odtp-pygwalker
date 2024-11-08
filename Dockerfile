@@ -74,6 +74,10 @@ WORKDIR /odtp
 # Fix for end of the line issue on Windows
 ##################################################
 
+# Avoid error when building on windows
+RUN sed -i 's/\r$//' /odtp/odtp-component-client/src/shell/log.sh
+RUN sed -i 's/\r$//' /odtp/odtp-component-client/src/shell/traceback.sh
+RUN sed -i 's/\r$//' /odtp/odtp-component-client/scripts/component-update.sh
 RUN sed -i 's/\r$//' /odtp/odtp-component-client/odtp-app.sh
 RUN sed -i 's/\r$//' /odtp/odtp-component-client/startup.sh
 RUN sed -i 's/\r$//' /odtp/odtp-app/app.sh
