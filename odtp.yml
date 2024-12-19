@@ -1,8 +1,15 @@
+# Schema version for tracking updates to the schema format
+schema-version: "v0.5.0"
+
 # This file should contain basic component information for your component.
 component-name: odtp-pygwalker
-component-author: Carlos Vivar Rios
+component-authors:
+  - name: Carlos Vivar Rios
+    orcid: "https://orcid.org/0000-0002-8076-2034"
 component-version: v0.1.4
-component-repository: https://github.com/caviri/odtp-pygwalker
+component-repository:
+  url: "https://github.com/caviri/odtp-pygwalker"
+  doi: null
 component-license: AGPL-3.0
 component-type: interactive
 component-description: Component that allows the use of the PyGWalker library to perform interactive visualization over data. 
@@ -10,13 +17,17 @@ tags:
   - streamlit
   - visualization
 
-# Information about the tools
+# Tool Information
 tools:
   - tool-name: pygwalker
-    tool-author: longxiaofei
-    tool-version: Apache 2.0
-    tool-repository: https://github.com/Kanaries/pygwalker-in-streamlit
-    tool-license: Tool's license
+    tool-authors:
+      - name: longxiaofei
+        orcid: null
+    tool-version: null
+    tool-repository:
+      url: "https://github.com/Kanaries/pygwalker-in-streamlit"
+      doi: null
+    tool-license: Apache 2.0
 
 # If your tool require some secrets token to be passed as ENV to the component
 # This won't be traced in MongoDB
@@ -40,7 +51,7 @@ parameters: null
 data-inputs:
   - name: csv files
     type: "csv"
-    path: "*.csv" 
+    path: "*.csv"
     description: Any number of csv files
 
 # If applicable, data-output list produced by the component
@@ -53,4 +64,5 @@ schema-output: null
 
 # If applicable, define devices needed such as GPU.
 devices:
-  gpu: false
+  - type: gpu
+    required: false
